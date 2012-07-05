@@ -1,0 +1,484 @@
+/* This is less about the past and more about the future */
+/* Ver EBS-FE 1.0 */
+
+/*fonts**********************************************************/
+
+
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(http://fonts.googleapis.com/css?family=Cabin+Sketch);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+SC);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+@import url(http://fonts.googleapis.com/css?family=Amaranth:700,400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Holtwood+One+SC);
+@import url(http://fonts.googleapis.com/css?family=Gochi+Hand);
+
+
+/*global********************************************************/
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font: 62.5%/130% Helvetica, sans-serif;
+  color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #666;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.bounds {
+	position: relative;
+	margin: 0 auto;
+}
+em {
+    font-style: italic;
+}
+/*navstuff******************************************************/
+
+h1 {
+	text-indent: -9999px;
+	display: block;
+	overflow: hidden;
+	width: 177px;
+	height:62px;
+	background: url("../images/logo.png");
+	margin-top: 5px;
+}
+
+h2 {
+    line-height: 1.3em;
+}
+
+#masthead {
+	background: url("../images/mastheadbg.png");
+	width: 178px;
+/*    top: 15px;
+    right: 0;
+*/	position: absolute;
+    left: 50%;
+	margin: 15px 0 0 105px;
+	height: 578px;
+	overflow: hidden;
+	line-height: 1.3em;
+}
+h2#whitelogo {
+    margin-left: -18px;
+}
+.backtotop {
+    text-align: center;
+    margin-top: 28px;
+}
+
+.backtotop a {
+    text-decoration: none;
+    color: #5e958e;
+    font-size: 11px;
+}
+
+#masthead h1 {
+}
+
+#masthead p {
+}
+
+.days {
+	font-family: 'Amaranth', sans-serif;
+	color: #8dcce5;
+	font-size: 12px;
+	line-height: 1.3em;
+	text-align: center;
+}
+
+.day {
+    margin-top: 15px;
+}
+
+.time {
+	font-family: 'Amaranth', sans-serif;
+	color: #ada299;
+	font-size: 12px;
+	line-height: 1.3em;
+	text-align: center;
+}
+
+.phone {
+    display: block;
+	font-family: 'Amaranth', sans-serif;
+	color: #e6b3a5;
+	font-size: 22px;
+	line-height: 1.3em;
+	text-align: center;
+	margin-top: 30px;
+	cursor: text;
+    text-decoration: none;
+}
+
+.phone:hover {
+    text-decoration: none;
+}
+
+.credits {
+	font-family: 'Amaranth', sans-serif;
+	color: #888888;
+	line-height: 1.3em;
+	text-align: center;
+	font-size: 11px;
+	margin-top: 10px;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+nav li.on,
+nav li:hover,
+nav li a:hover {
+    color: #41403F;
+    outline: none;
+}
+
+li.menu, li.about {
+	font-family: 'Holtwood One SC', serif;
+	font-size: 33px;
+	color: #5e958e;
+	line-height: 1.3em;
+	text-align: center;
+}
+
+.onlineordering, .reviews {
+	font-family: 'Holtwood One SC', serif;
+	font-size: 24px;
+	color: #5e958e;
+	line-height: 1.3em;
+	text-align: center;
+}
+
+.onlineordering a {
+    text-decoration: none;
+    color: #5e958e;
+
+}
+
+#iconpop {
+    display: block;
+    margin: 15px auto;
+}
+
+.map {
+    text-align: center;
+    background: url("../images/mapdt.png") no-repeat center;
+    margin-top: 10px;
+}
+.map a {
+	color: #d4474f;
+	font-size: 13px;
+	font-family: 'Helvetica';
+    line-height: 1.3em;	
+    text-align: center;
+    text-decoration: none;
+}
+
+.map a:hover {
+    color: #551e21;
+}
+
+address {
+	color: #817e7a;
+	font-family: 'Helvetica';
+	font-size: 14px;
+	line-height: 1.3em;
+	text-align: center;	
+	margin-top: 15px;
+}
+
+address a {
+    text-decoration: none;
+}
+
+
+/*main*********************************************************************/
+
+#main {
+    background: #000;
+}
+
+#main .mask,
+#main .bg {
+    position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.0;
+}
+
+#main .bg {
+    z-index: 3;
+}
+
+#main .mask {
+    opacity: 1.0;
+    z-index: 4;
+    display: none;
+}
+
+#main .bounds {
+    position: relative;
+	width: 570px;
+	z-index: 5;
+}
+
+#main #masthead .bounds {
+	width: 177px;	
+}
+
+#content {
+/*  background: transparent url("../images/bg-chalkboard.png") repeat-y;*/
+	background: #2B2B2D url("../images/bg-chalkboard.jpg") repeat-y center top;
+	width: 408px;
+	box-shadow: 0px 0px 6px #000;
+}
+
+#content .bounds {
+	width: 300px;
+}
+
+#todaysspecials {
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 60px;
+	color: #ffc5b5;
+	line-height: 1.0em;
+	text-align: center;
+	background: url("../images/arrow.png") no-repeat center;
+}
+
+.tweet_hashtag {
+    display: none;
+}
+
+.tweet_time {
+    display: block;
+}
+
+#arrow {
+    display: inline;
+}
+#special-day {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#menu {
+    font-size: 60px;
+    font-family: 'Fredericka the Great', cursive;
+    color: #a9d27e;
+    line-height: 1.3em;
+	text-align: center;
+}
+#our {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.3em;
+	font-family: 'Cabin Sketch', cursive;
+	text-align: center;
+}
+
+#twitter {
+    line-height: 1.3em;
+	text-align: center;
+	margin-top: 20px;
+}
+#twitter a {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 18px;
+	color: #fff5b5;
+	text-decoration: none;
+}
+
+.tweet_text {
+    position: relative;
+    display: block;
+    width: 275px;
+    line-height: 1.1em;
+}
+
+.tweet_text .price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0px -30px 0 0;
+}
+
+#crlogo, #ctlogo, #ctrlogo, #cmlogo {
+    margin-left: 20px;
+    text-align: center;
+}
+#twitter img {
+    vertical-align: middle;
+}
+
+
+h3 {
+	font-family: 'Alegreya SC', serif;
+	color: #f18d79;
+	font-size: 22px;
+	line-height: 1.3em;
+	margin-top: 20px;
+}
+
+.meta {
+   float: right;
+   font-size: 14px;
+	font-family: 'Amaranth', sans-serif;
+	color: #b9d8e0;
+}
+
+.items, .price, .ctlogo {
+	font-family: 'Amatic SC', cursive;
+	color: #ffffff;
+	font-size: 30px;
+	line-height: 1.3em;
+}
+
+#every, #rachellogo, #ctlogo, .chicagoreader {
+    text-align: center;
+}
+
+.price {
+    float: right;
+}
+
+.extras .price {
+    font-size: 20px;
+}
+
+a.catering {
+    color: #fff;
+}
+
+.detail, .ttime, .ttime a {
+	font-family: 'Amaranth', sans-serif;
+	color: #b9d8e0;
+	font-size: 14px;
+	line-height: 1.3em;
+	display: block;
+    text-decoration: none;
+}
+
+.detail {
+    width: 250px;
+}
+
+.detail#date {
+    width: auto;
+}
+
+.ttime {  /*twitter time*/
+    text-align: center;
+}
+
+.reservations {
+    font-family: 'Amatic SC', bold;
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 1.3em;
+    margin-top: 20px;
+}
+
+.reservations li {
+    margin-top: 30px;
+}
+
+.aboutgreen, .locals {
+    font-size: 20px;
+    color: #d7f1a3;
+    line-height: 1.3em;
+	font-family: 'Cabin Sketch', cursive;	
+}
+
+.aboutgreen p, .aboutblue p, .locals, .rachelray, .chicagotribune p  {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.aboutblue, .rachelray, .chicagoreader, .charlietrotter, .chicagomagazine, .chicagotribune {
+    	font-family: 'Gochi Hand', cursive;
+    	color: #86a5ad;
+    	font-size: 22px;
+    	line-height: 1.3em;
+}
+
+.extras {
+	font-family: 'Amatic SC', bold;
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 1.3em;
+}
+.kidding {
+    font-family: 'Gochi Hand', cursive;
+    color: #ffffff;
+	font-size: 22px;
+	line-height: 1.3em;
+	margin-top: 20px;  
+    text-align: center;
+}
+
+.review, h2.about {
+        font-family: 'Fredericka the Great', regular;
+        color: #86ebf7;
+        font-size: 60px;
+        text-align: center;  
+        margin: 50px 20px 20px;  
+}
+
+.zagat {
+    background: url("../images/zagat.png") no-repeat center;
+    width: 106px;
+    height: 30px;
+}
+
+.ctlogo ul {
+    text-align: center;
+}
+.charlietrotter {
+    color: #f18d79;
+    font-size: 18px;
+    line-height: 1.3em;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.chicagoreader {
+    color: #9bc3a3;
+    font-size: 17px;
+}
+
+.cmlogo {
+    background: url("../images/chicagomagazine.png") no-repeat center;
+}
+
+.chicagomagazine {
+    color: #86a5ad;
+    font-size: 18px;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+.chicagotribune {
+    color: #ccad8c;
+    font-size: 18px;    
+}
+
+#footer {
+}
